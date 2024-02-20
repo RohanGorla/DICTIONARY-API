@@ -5,17 +5,25 @@ function ron() {
     let wor = document.getElementById("word").value;    
     console.log(wor);
     let reqUrl = `${url}${wor}`;
+    var pass;
+    
+    let p = fetch(reqUrl).then((res)=>{
+        if (res.status != 404) {
+            pass = true;
+            return res.json();
+        } else {
+            document.querySelector("p").innerText = "Sorry, word doesn't exist in DATABASE!"
+            pass = false;
+        }
+    });
 
-    let p = fetch(reqUrl).
-    then((res)=>{
-        return res.json();
-    }).
-    then((resp)=>{
-            console.log(resp);
-            if (resp.title) {
-                document.querySelector("p").innerText = "Word doesn't exist in DATABASE!"
-            } else {
+    setTimeout(()=>{
+        if (pass) {
+            console.log("hello");
+            p.then((resp) => {
+                console.log(resp);
                 document.querySelector("p").innerText = resp[0].meanings[0].definitions[0].definition;
-            }
-        });
+            })
+        }
+    }, 500);
 }
