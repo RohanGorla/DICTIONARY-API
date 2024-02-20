@@ -7,11 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>DICTIONARY USING API</h1>
-    <input type="text" name="Word" id="word" placeholder="Enter Word...">
-    <p></p>
-    <button onclick="ron()">Search</button>
+    <div class="main">
+        <div class="container">
+            <div>
+                <h1>DICTIONARY USING API</h1>
+            </div>
 
+            <div class="search">
+                <input type="text" name="Word" id="word" placeholder="Enter Word..." onfocus="this.value=''">
+                <button onclick="ron()">Search</button>
+            </div>
+
+            <div class="result">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    
     <script src="index.js"></script>
 </body>
 </html>
