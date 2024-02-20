@@ -9,17 +9,22 @@
 <body>
     <div class="main">
         <div class="container">
-            <div>
+            <div class="heading">
                 <h1>DICTIONARY USING API</h1>
             </div>
 
             <div class="search">
                 <input type="text" name="Word" id="word" placeholder="Enter Word..." onfocus="this.value=''">
-                <button onclick="ron()">Search</button>
+                <button class="searchbtn">Search</button>
             </div>
-
+            <div class="audio">
+                <button class="sound">Audio</button>
+            </div>
             <div class="result">
-                <p></p>
+                <h2></h2>
+                <p class="partos"></p>
+                <p class="meaning"></p>
+                <p class="phonetic"></p>
             </div>
         </div>
     </div>

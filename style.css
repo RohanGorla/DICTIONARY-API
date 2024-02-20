@@ -19,9 +19,18 @@ body{
 }
 
 .container{
-    height: 300px;
+    /* height: 300px; */
+    width: 400px;
     background-color: rgb(235, 197, 11);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading{
+    width: 400px;
+    display: flex;
+    justify-content: center;
 }
 
 h1{
@@ -30,21 +39,55 @@ h1{
     padding: 5px;
 }
 
+h2{
+    margin-left: 10px;
+    color: black;
+}
+
 input{
     padding: 5px;
     border-radius: 6px;
     margin-left: 10px;
 }
 
-button{
+.search{
+    /* background-color: green; */
+    width: 400px;
+}
+
+.searchbtn{
     padding: 3px;
     border-radius: 5px;
     margin-left: 50px;
 }
 
+.result{
+    /* background-color: red; */
+    width: 400px;
+}
+
 p{
-    margin-top: 20px;
+    margin-left: 10px;
+    color: black;
+}
+
+p.meaning{
+    /* background-color: blue; */
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 300px;
     margin-left: 10px;
     color: black;
+}
+
+.audio{
+    /* background-color: blue; */
+    width: 400px;
+}
+
+.sound{
+    padding: 3px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: 240px;
 }
